@@ -2,28 +2,18 @@ import javax.xml.crypto.Data
 
 //Bai1
 class BankAccount(val accountNumber: String, initialBalance: Double) {
-
     private var balance = initialBalance
-
     fun deposit(amount: Double) {
-
         if (amount > 0)
             balance += amount
-
     }
-
     fun withdraw(amount: Double) {
-
         if (amount > 0 && amount <= balance)
             balance -= amount
-
     }
-
     fun getBalanceInfo(): Double {
-
         return balance
     }
-
 }
 fun OOP_bai1(){
     val myAcc = BankAccount("03455", 10000.0)
@@ -34,10 +24,10 @@ fun OOP_bai1(){
 }
 
 //Bai2
-data class UserProfile(
-    val id: Int, val username: String,
-    val email: String, val isActive: Boolean
-)
+    data class UserProfile(
+        val id: Int, val username: String,
+        val email: String, val isActive: Boolean
+    )
 
 fun updateEmail(oldProfile: UserProfile, newEmail: String): UserProfile {
     return oldProfile.copy(email = newEmail)
